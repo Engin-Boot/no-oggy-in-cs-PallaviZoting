@@ -1,17 +1,30 @@
 using System;
 using System.Collections.Generic;
 
+
 class NoOggyChecker
 {
   static void RemoveOggy(List<string> names)
   {
-    foreach (var name in names)
-    {
-        if(name.StartsWith("oggy")) {
-            Console.WriteLine($"Need to remove {name}!");
-            names.Remove(name);
-        }
-    }
+    for(int i=0;i<names.Count;i++)
+     {
+      Console.WriteLine($"{names[i]}");
+     }
+      Console.WriteLine($"Remove name starts with oggy!");
+     for(int i=0;i<names.Count;i++)
+     {
+      if(names[i].StartsWith("oggy"))
+       {
+        Console.WriteLine($"Need to remove {names[i]}!");
+        names.Remove(names[i]);
+        i=i-1;
+       }
+     }
+      Console.WriteLine($"After removing Substring oggy, Names remains in Array:");
+     for(int i=0;i<names.Count;i++)
+      {
+     Console.WriteLine($"{names[i]}");
+      }
   }
   static bool OggyIsRemoved(List<string> names)
   {
