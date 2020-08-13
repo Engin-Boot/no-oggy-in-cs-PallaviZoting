@@ -18,6 +18,7 @@ class NoOggyChecker
      }
       
   }
+  
   static bool OggyIsRemoved(List<string> names)
   {
     return names.Find(x => x.Contains("oggy")) == null;
